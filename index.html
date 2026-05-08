@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard-Path 2D Signature Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <div>
+          <h1>Name Digital Signature Generator</h1>
+        </div>
+      </header>
+
+      <section class="topBar">
+        <div class="nameLine">
+          <div class="nameLabel">Name</div>
+          <input
+            id="textInput"
+            class="nameInput"
+            type="text"
+            inputmode="text"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="Type a name (e.g., Yashpatil)"
+          />
+        </div>
+
+        <div class="topActions">
+          <button id="btnDownload" class="btn btnPrimary" type="button">Download PNG</button>
+        </div>
+      </section>
+
+      <section class="editRow" aria-label="Edit controls">
+        <button id="btnEdit" class="btn btnGhost" type="button">Edit</button>
+      </section>
+
+      <section class="canvasWrap">
+        <canvas id="sigCanvas" width="1100" height="420" aria-label="Signature canvas"></canvas>
+        <div class="legend">
+          Uses a QWERTY layout map (A–Z). Non-letters are ignored.
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="muted">
+          YOUR Digital Signature 
+        </div>
+      </footer>
+    </main>
+
+    <dialog id="editDialog" class="dialog">
+      <form method="dialog" class="dialogCard" id="editForm">
+        <div class="dialogHeader">
+          <div class="dialogTitle">Edit signature</div>
+          <button class="btn btnGhost" value="cancel" type="submit">Close</button>
+        </div>
+
+        <div class="dialogBody">
+          <div class="row controls">
+            <label class="field compact">
+              <span class="label">Line color</span>
+              <input id="colorInput" type="color" value="#ffffff" />
+            </label>
+
+            <label class="field compact">
+              <span class="label">Thickness</span>
+              <input id="widthInput" type="range" min="1" max="18" value="4" />
+            </label>
+
+            <label class="field compact">
+              <span class="label">Background</span>
+              <select id="bgInput">
+                <option value="transparent">Transparent (PNG)</option>
+                <option value="black" selected>Black</option>
+                <option value="white">White</option>
+              </select>
+            </label>
+
+            <label class="toggle">
+              <input id="pointsToggle" type="checkbox" />
+              <span>Show points</span>
+            </label>
+
+            <label class="toggle">
+              <input id="labelsToggle" type="checkbox" />
+              <span>Show letters</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="dialogFooter">
+          <button id="btnApply" class="btn btnPrimary" value="apply" type="submit">Apply</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
