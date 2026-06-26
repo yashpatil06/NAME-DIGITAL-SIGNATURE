@@ -27,6 +27,7 @@ A deterministic system that converts typed text into a unique 2D signature by tr
 - Keyboard overlay while typing (auto-hides after ~1 second)
 - Download exports **signature only** (no keyboard/points/labels) via `canvas.toDataURL("image/png")`
 
+<img width="1100" height="420" alt="keyboard-signature-yashpatil" src="https://github.com/user-attachments/assets/9a4edf9a-6ddf-404e-afad-2c9881f77243" />
 
 
 
