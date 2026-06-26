@@ -1,6 +1,6 @@
 # Name Digital Signature Generator
 
-https://yashpatil06.github.io/NAME-DIGITAL-SIGNATURE/
+> 🔗 **Live Site**: https://yashpatil06.github.io/NAME-DIGITAL-SIGNATURE/
 
 A deterministic system that converts typed text into a unique 2D signature by tracing the **physical positions of keyboard keys** and rendering them as a continuous geometric path.
 
